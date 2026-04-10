@@ -1,0 +1,74 @@
+/* Contenedor principal del Header */
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 56px;
+  padding: 0 12px;
+}
+
+/* --- LÓGICA DE INVERSIÓN (INTERCAMBIO) --- */
+/* CASO: align="start" */
+.wrapper-start {
+  flex-direction: row-reverse; 
+  justify-content: space-between;
+}
+
+/* CASO: align="end" */
+.wrapper-end {
+  flex-direction: row; 
+  justify-content: space-between;
+}
+
+/* CASO: align="center" */
+.wrapper-center {
+  justify-content: center; 
+  gap: 12px;
+}
+
+/* --- COMPONENTES INTERNOS --- */
+.title-group {
+  display: flex;
+  align-items: center;
+  flex: 1; 
+}
+
+.header-logo {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.header-left-content {
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.title-start {
+  text-align: left !important;
+  margin: 0;
+}
+
+.title-end {
+  text-align: right !important;
+  margin: 0;
+}
+
+.title-center {
+  text-align: center !important;
+  flex: initial;
+}
+
+/* --- RESET DE IONIC --- */
+ion-title {
+  --padding-start: 0;
+  --padding-end: 0;
+  flex: 1;
+}
+
+ion-toolbar {
+  --padding-start: 0;
+  --padding-end: 0;
+}

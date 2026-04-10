@@ -1,0 +1,42 @@
+.mapa-container {
+  height: 350px; 
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  background: #1a1a1a;
+  z-index: 0;
+}
+.mapa {
+  height: 100%;
+  width: 100%;
+}
+
+.user-location {
+  text-align: center;
+}
+
+.places-popup {
+  color: #333;
+  min-width: 150px;
+}
+
+.places-popup strong {
+  font-size: 1rem;
+}
+
+.places-popup span {
+  font-size: 0.9rem;
+}
+
+.places-distance {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.places-distance span {
+  color: #2670b6;
+  font-weight: bold;
+}

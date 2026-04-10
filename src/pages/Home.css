@@ -1,0 +1,160 @@
+
+
+.content-limiter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  min-height: 100%;
+}
+
+/* --- ESTILO BASE (Móvil Primero) --- */
+.landing-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  padding: 24px;
+  width: 100%;
+}
+
+/* --- SECCIÓN HERO (Móvil) --- */
+.hero-section {
+  text-align: center;
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-icon {
+  font-size: 84px;
+  color: #38bdf8;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.6));
+}
+
+.hero-title {
+  color: whitesmoke;
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.accent {
+  color: #38bdf8;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  max-width: 280px;
+  margin: 12px auto 0;
+  line-height: 1.4;
+  color: #94a3b8;
+}
+
+.auth-card {
+  width: 100%;
+  --background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  margin: 16px 0;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.auth-card:active {
+  transform: scale(0.97);
+  --background: rgba(30, 41, 59, 0.8);
+}
+
+.card-body {
+  display: flex;
+  align-items: center;
+  padding: 20px !important;
+}
+
+.icon-wrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  color: white;
+  margin-right: 18px;
+  flex-shrink: 0;
+}
+
+.login-bg {
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.register-bg {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-wrapper h3 {
+  color: whitesmoke;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.text-wrapper p {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* --- MEDIA QUERY PARA DESKTOP (WEB) --- */
+@media (min-width: 1024px) {
+  .landing-main {
+    flex-direction: row; 
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-content: space-around;
+    gap: 60px;
+    padding: 0 40px;
+    min-height: 85vh; 
+  }
+
+  .hero-section {
+    text-align: left;
+    align-items: flex-start;
+    flex: 1.2;
+    margin-bottom: 0;
+  }
+
+  .hero-icon {
+    font-size: 110px; 
+  }
+
+  .hero-title {
+    font-size: 4.8rem; 
+  }
+
+  .hero-subtitle {
+    max-width: 480px;
+    font-size: 1.4rem;
+    margin-left: 0;
+  }
+
+  ion-grid.action-grid {
+    flex: 0.8;
+    max-width: 420px; 
+    display: flex;
+    justify-content: center;
+  }
+
+  .auth-card {
+    margin: 24px 0; 
+  }
+}

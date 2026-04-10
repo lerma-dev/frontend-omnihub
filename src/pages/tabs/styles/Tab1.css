@@ -1,0 +1,84 @@
+/* Contenedor que organiza todo */
+.main-weather-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .main-weather-wrapper {
+    grid-template-columns: 1fr 1fr; 
+    align-items: start;
+    padding-top: 30px;
+  }
+}
+
+.current-weather-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.forecast-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Tarjeta Principal */
+.main-card {
+  background: #121212;
+  border-radius: 25px;
+  border: 1px solid #333;
+  margin: 0;
+}
+
+.temp-current {
+  color: var(--ion-color-primary);
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.current-icon {
+  width: 120px;
+  margin: 0 auto;
+}
+
+/* Lista de pronóstico */
+.forecast-list {
+  background: #1e1e1e;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid #333;
+}
+
+.extra-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: large;
+  gap: 20px;
+}
+
+.weather-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+
+.title-clima {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.icon-clima {
+  margin-left: 10px;
+  font-size: 25px;
+  color: var(--ion-color-primary)
+}
