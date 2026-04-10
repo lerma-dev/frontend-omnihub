@@ -21,8 +21,11 @@ const Home: React.FC = () => {
 
   const router = useIonRouter();
 
-  function navigateTo(...args) {
-    router.push(...args);
+  function navigateTo(...args: any[]) {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+    router.push(args[0], args[1], args[2]); // O router.push(...args)
   }
 
   useIonViewWillEnter(() => {

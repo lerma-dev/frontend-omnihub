@@ -24,11 +24,11 @@ const Tab3: React.FC = () => {
 
   const { productos, loading, refrescar } = useProducts();
 
-  const [selectedProduct, setSelectedProduct] = useState<Producto | null>(null);
+  const [selectedProduct, setSelectedProduct] = useState<any>(null);
 
   return (
     <IonPage>
-      <Header title="Productos" logo={storefront}  size="40"/>
+      <Header title="Productos" logo={storefront}  size={40}/>
       <IonContent>
         <Header title="Productos" type="condense" />
         

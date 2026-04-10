@@ -27,11 +27,11 @@ const Register: React.FC = () => {
     password:''
   });
 
-  function navigateTo(...args) {
+  function navigateTo(...args: any[]) {
     if (document.activeElement instanceof HTMLElement) {
       document.activeElement.blur();
     }
-    router.push(...args);
+    router.push(args[0], args[1], args[2]); // O router.push(...args)
   }
 
   useIonViewWillEnter(() => {
