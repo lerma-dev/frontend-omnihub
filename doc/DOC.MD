@@ -54,7 +54,7 @@ npm install @paypal/react-paypal-js
 - `@paypal/react-paypal-js`: Integración nativa de botones de pago.
 
 
-**Para iniciar el frontend:**
+**Para iniciar el frontend de ionic:**
 ```bash
 ionic serve
 ```
