@@ -36,7 +36,7 @@
 }
 
 .temp-current {
-  color: var(--ion-color-primary);
+  color: var(--green-pastel);
   font-size: 4.5rem;
   font-weight: 800;
   margin: 0;
@@ -47,11 +47,15 @@
   margin: 0 auto;
 }
 
+.current-info p {
+  color: var(--grey-ligth)
+}
+
 /* Lista de pronóstico */
 .forecast-list {
   background: #1e1e1e;
   border-radius: 20px;
-  padding: 10px;
+  padding: 8px;
   border: 1px solid #333;
 }
 
@@ -62,6 +66,10 @@
   text-align: center;
   font-size: large;
   gap: 20px;
+}
+
+.extra-data span {
+  color: var(--grey-ligth)
 }
 
 .weather-title {
@@ -80,5 +88,9 @@
 .icon-clima {
   margin-left: 10px;
   font-size: 25px;
-  color: var(--ion-color-primary)
+  color: var(--green-pastel)
+}
+
+.center p {
+  color: var(--white)
 }

@@ -30,7 +30,7 @@ const Tab4: React.FC = () => {
         <IonButton 
           onClick={(e) => handleLogout(e)} 
           shape="round" 
-          color="danger"> 
+          className="log-out"> 
           <IonIcon slot="icon-only" icon={exit} /> 
         </IonButton>
       </Header>
@@ -40,7 +40,7 @@ const Tab4: React.FC = () => {
         {/* Sección de la Empresa */}
         <IonCard className="dark-card">
           <IonCardHeader>
-            <IonCardTitle color="primary">Nuestra Empresa</IonCardTitle>
+            <IonCardTitle>Nuestra Empresa</IonCardTitle>
             <IonCardSubtitle>Soluciones Digitales Premium</IonCardSubtitle>
           </IonCardHeader>
           <IonCardContent>
@@ -52,21 +52,21 @@ const Tab4: React.FC = () => {
         {/* Datos de Contacto */}
         <IonList inset={true} className="dark-list">
           <IonItem lines="full">
-            <IonIcon aria-hidden="true" icon={phonePortraitOutline} slot="start" color="primary" />
+            <IonIcon aria-hidden="true" icon={phonePortraitOutline} slot="start" />
             <IonLabel>
               <h3>Teléfono</h3>
               <p>+52 (656) 123-4567</p>
             </IonLabel>
           </IonItem>
           <IonItem lines="full">
-            <IonIcon aria-hidden="true" icon={mailOutline} slot="start" color="primary" />
+            <IonIcon aria-hidden="true" icon={mailOutline} slot="start" />
             <IonLabel>
               <h3>Correo Electrónico</h3>
               <p>soporte@omnihub.dev</p>
             </IonLabel>
           </IonItem>
           <IonItem lines="none">
-            <IonIcon aria-hidden="true" icon={timeOutline} slot="start" color="primary" />
+            <IonIcon aria-hidden="true" icon={timeOutline} slot="start" />
             <IonLabel>
               <h3>Horario de Atención</h3>
               <p>Lun - Vie: 9:00 AM - 6:00 PM</p>

@@ -17,6 +17,30 @@
   margin-bottom: 20px;
 }
 
+.dark-card ion-card-title {
+  color: var(--green-pastel);
+}
+
+.dark-card ion-card-subtitle {
+  color: var(--white);
+}
+
+.dark-card ion-card-content {
+  color: var(--grey-ligth);
+}
+
+.dark-list ion-icon {
+  color: var(--green-pastel);
+}
+
+.dark-list h3 {
+  color: var(--white);
+}
+
+.dark-list p {
+  color: var(--grey-ligth);
+}
+
 .dark-list {
   background: transparent !important;
   margin-bottom: 20px;

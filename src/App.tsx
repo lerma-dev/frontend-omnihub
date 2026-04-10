@@ -22,6 +22,7 @@ import '@ionic/react/css/display.css';
 /* Ionic Dark Mode */
 import '@ionic/react/css/palettes/dark.system.css';
 import './App.css';
+import './themes/variables.css';
 
 setupIonicReact();
 

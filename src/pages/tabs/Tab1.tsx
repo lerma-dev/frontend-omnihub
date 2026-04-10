@@ -33,7 +33,7 @@ const Tab1: React.FC = () => {
             <IonButton 
               onClick={fetchWeather} 
               shape="round" 
-              color="secondary"> 
+              className="refresh"> 
               <IonIcon slot="icon-only" icon={refresh} /> 
             </IonButton>
           )
@@ -46,7 +46,7 @@ const Tab1: React.FC = () => {
         {/* Estado de carga */
           loading && (
             <div className="center">
-              <IonSpinner name="crescent" color="primary" />
+              <IonSpinner name="crescent" className="spinner" />
               <p>Consultando Clima...</p>
             </div>
           )

@@ -37,6 +37,6 @@
 }
 
 .places-distance span {
-  color: #2670b6;
+  color: var(--green-soldier);
   font-weight: bold;
 }

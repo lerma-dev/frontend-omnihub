@@ -1,6 +1,6 @@
 .productos-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 15px;
   max-width: 100%;
   margin: 0 auto;
@@ -9,7 +9,7 @@
 }
 
 .productos-grid ion-card:hover {
-  border: 1px solid var(--ion-color-primary);
+  border: 1px solid var(--green-pastel);
   transition: 0.3s ease;
 }
 
@@ -69,7 +69,6 @@
   gap: 2px;
   flex: 1 1 auto; 
   justify-content: flex-start; 
-  width: 100%;
   user-select: none;
 }
 
@@ -107,7 +106,7 @@
 .text-products span {
   font-weight: bold;
   font-size: 0.8rem;
-  color: var(--ion-color-primary);
+  color: var(--green-pastel);
   margin: 0;
 }
 
@@ -120,13 +119,15 @@
 }
 
 .precio-producto span {
-  color: var(--ion-color-primary);
+  color: var(--green-pastel);
   user-select: none;
 }
 
 /* Boton comprar */
 .comprar {
   --border-radius: 15px;
+  --background: var(--green-pastel);
+  color: var(--green-soldier);
   margin-top: 15px; 
   width: 100%;
   font-weight: bold;
@@ -135,5 +136,5 @@
 }
 
 .comprar:hover {
-  --box-shadow: 0 4px 15px rgba(56, 128, 255, 0.4);
+  --box-shadow: 0 4px 15px var(--shadow-filter);
 }

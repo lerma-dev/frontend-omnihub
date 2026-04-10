@@ -24,8 +24,10 @@ const ForecastList: React.FC<{forecast: Forecast}> = ({forecast}) => {
         </span>
       </div>
       <div className="container-hums">
-        <IonIcon icon={waterOutline} className="icon-hum" />
-        <span className="day-humidity">{forecast.humedad}%</span>
+        <span className="day-humidity">
+          <IonIcon icon={waterOutline} className="icon-hum" />
+          {forecast.humedad}%
+        </span>
       </div>
       <span className="day-desc">{forecast.desc}</span>
     </div>

@@ -1,0 +1,14 @@
+:root {
+  --green-primary: #005f00;
+  --green-secondary: #009700;
+  --green-pastel: #a4fdc6;
+  --green-soldier: #003510;
+  --green-glass: rgba(30, 59, 42, 0.5);
+  --red-pastel: #b34747;
+  --red-soldier: #350000;
+  --black: #000;
+  --white: #fff; 
+  --grey-ligth: #bbbbbb;
+  --shadow-filter: rgba(56, 248, 152, 0.6);
+  --gradient-green: linear-gradient(135deg, #38f89e, #25eb60);
+}

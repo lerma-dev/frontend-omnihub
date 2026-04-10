@@ -1,4 +1,5 @@
 import { IonIcon, IonLabel } from '@ionic/react';
+import './styles/Title.css';
 
 export interface Title {
   name: string;

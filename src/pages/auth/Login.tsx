@@ -85,7 +85,9 @@ const Login: React.FC = () => {
   return (
     <IonPage>
       <Header title="OmniHub" align="center">
-        <IonButton onClick={() => navigateTo('/Home', 'back', 'pop')} shape="round">
+        <IonButton 
+          onClick={() => navigateTo('/Home', 'back', 'pop')} shape="round" 
+          className="refresh">
           <IonIcon 
             slot="icon-only" 
             icon={arrowBack}

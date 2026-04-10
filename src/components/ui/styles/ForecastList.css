@@ -3,8 +3,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px;
-  border-bottom: 1px solid #2a2a2a;
+  padding: 3px 0;
+  width: 100%;
+  border-bottom: 1px solid #363636;
 }
 
 .forecast-item:last-child {
@@ -19,7 +20,6 @@
   text-align: center;
   min-height: 100%;
   font-size: 0.9rem;
-  color: #888;
   gap: 2px;
 }
 
@@ -28,19 +28,20 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100%;
-  gap: 2px;
 }
 
 /*Titulos*/
 .day-name {
+  text-align: left;
+  font-size: 0.8rem;
   text-transform: capitalize;
+  color: var(--white);
 }
 
 .day-temp {
   font-weight: bold;
-  font-size: 1.1rem;
-  color: var(--ion-color-primary);
+  font-size: 1rem;
+  color: var(--green-pastel);
 }
 
 .temp-min {
@@ -52,9 +53,8 @@
 }
 
 .day-humidity {
-  font-size: 1rem;
-  color: #888;
-  text-align: center;
+  font-size: 0.8rem;
+  color: var(--grey-ligth);
 }
 
 .day-desc {
@@ -62,11 +62,12 @@
   color: #888;
   width: 80px;
   text-align: right;
+  color: var(--grey-ligth);
 }
 
 /*Iconos*/
 .icon-hum {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   color: var(--ion-color-primary)
 }
 

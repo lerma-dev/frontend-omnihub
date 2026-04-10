@@ -25,7 +25,7 @@ const Tab2: React.FC = () => {
             <IonButton 
               onClick={fetchPlaces} 
               shape="round" 
-              color="secondary"> 
+              className="refresh"> 
               <IonIcon slot="icon-only" icon={refresh} /> 
             </IonButton>
           )
@@ -36,14 +36,14 @@ const Tab2: React.FC = () => {
         <Header title="Búsqueda" type="condense" />
 
         <Mapa userLocation={userLocation} places={places} />
-        <IonText color="primary" className="text">
+        <IonText className="text color">
           <h2>Lugares Cercanos</h2>
         </IonText>
 
         {/* Estado de carga */
           loading && (
             <div className="center-btn-places">
-              <IonSpinner name="crescent" color="primary" />
+              <IonSpinner name="crescent" className="spinner" />
               <p>Consultando Lugares...</p>
             </div>
           )

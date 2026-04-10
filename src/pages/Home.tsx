@@ -58,7 +58,8 @@ const Home: React.FC = () => {
                 <IonCol>
                   
                   {/* Tarjeta Iniciar Sesión */}
-                  <IonCard className="auth-card glass-effect" 
+                  <IonCard 
+                    className="auth-card glass-effect" 
                     onClick={() => navigateTo('/Login', 'forward', 'push')}>
                     <IonCardContent className="card-body">
                       <div className="icon-wrapper login-bg">

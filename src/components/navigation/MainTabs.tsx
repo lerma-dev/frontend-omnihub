@@ -6,8 +6,7 @@ import {
   IonTabs,
   useIonRouter,
   IonRouterOutlet,
-  useIonViewWillEnter,
-  IonRippleEffect
+  useIonViewWillEnter
 } from '@ionic/react';
 import { Redirect, Route } from 'react-router-dom';
 import { homeSharp, searchSharp, storefront, informationCircle } from 'ionicons/icons';
@@ -54,22 +53,18 @@ const MainTabs: React.FC = () => {
         <IonTabButton tab="tab1" href="/App/Tab1">
           <IonIcon aria-hidden="true" icon={homeSharp} />
           <IonLabel>Home</IonLabel>
-          <IonRippleEffect />
         </IonTabButton>
         <IonTabButton tab="tab2" href="/App/Tab2">
           <IonIcon aria-hidden="true" icon={searchSharp} />
           <IonLabel>Busqueda</IonLabel>
-          <IonRippleEffect />
         </IonTabButton>
         <IonTabButton  tab="tab3" href="/App/Tab3">
           <IonIcon aria-hidden="true" icon={storefront} />
           <IonLabel>Productos</IonLabel>
-          <IonRippleEffect />
         </IonTabButton>
         <IonTabButton tab="tab4" href="/App/Tab4">
           <IonIcon aria-hidden="true" icon={informationCircle} />
           <IonLabel>Acerca de</IonLabel>
-          <IonRippleEffect />
         </IonTabButton>
       </IonTabBar>
     </IonTabs>

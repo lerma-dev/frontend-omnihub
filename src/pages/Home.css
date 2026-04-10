@@ -30,9 +30,9 @@
 
 .hero-icon {
   font-size: 84px;
-  color: #38bdf8;
+  color: var(--green-pastel);
   margin-bottom: 16px;
-  filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.6));
+  filter: drop-shadow(0 0 15px var(--shadow-filter));
 }
 
 .hero-title {
@@ -44,7 +44,7 @@
 }
 
 .accent {
-  color: #38bdf8;
+  color: var(--green-pastel);
 }
 
 .hero-subtitle {
@@ -57,11 +57,11 @@
 
 .auth-card {
   width: 100%;
-  --background: rgba(30, 41, 59, 0.5);
+  --background: var(--green-glass);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
+  border-radius: 30px;
   margin: 16px 0;
   cursor: pointer;
   transition: transform 0.2s ease, background 0.2s ease;
@@ -69,7 +69,7 @@
 
 .auth-card:active {
   transform: scale(0.97);
-  --background: rgba(30, 41, 59, 0.8);
+  --background: rgba(30, 59, 37, 0.8);
 }
 
 .card-body {
@@ -92,8 +92,12 @@
 }
 
 .login-bg {
-  background: linear-gradient(135deg, #38bdf8, #2563eb);
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+  background: var(--gradient-green);
+  box-shadow: 0 4px 15px rgba(37, 235, 96, 0.3);
+}
+
+.login-bg ion-icon {
+  color: var(--green-soldier)
 }
 
 .register-bg {
