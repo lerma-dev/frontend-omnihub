@@ -13,7 +13,20 @@ export const usePlaces = () => {
     setLoading(true);
     setError(null);
     try {
-      const coordenadas = await Geolocation.getCurrentPosition();
+      // 1. Validar y solicitar permisos (Crucial para la primera vez en Android)
+      const permiso = await Geolocation.checkPermissions();
+      
+      if (permiso.location !== 'granted') {
+        const solicitud = await Geolocation.requestPermissions();
+        if (solicitud.location !== 'granted') {
+          throw new Error('Permiso de ubicación denegado');
+        }
+      }
+
+      const coordenadas = await Geolocation.getCurrentPosition({
+        enableHighAccuracy: true,
+        timeout: 10000 // 10 segundos
+      });
       const { latitude, longitude } = coordenadas.coords;
       setUserLocation({ lat: latitude, lng: longitude });
 
