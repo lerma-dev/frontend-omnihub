@@ -1,6 +1,7 @@
 // utils/usePlaces.ts
 import { useState } from 'react';
 import { Geolocation } from '@capacitor/geolocation';
+import { Capacitor } from '@capacitor/core';
 import api from '../api/config';
 
 export const usePlaces = () => {
@@ -13,13 +14,14 @@ export const usePlaces = () => {
     setLoading(true);
     setError(null);
     try {
-      // 1. Validar y solicitar permisos (Crucial para la primera vez en Android)
-      const permiso = await Geolocation.checkPermissions();
-      
-      if (permiso.location !== 'granted') {
-        const solicitud = await Geolocation.requestPermissions();
-        if (solicitud.location !== 'granted') {
-          throw new Error('Permiso de ubicación denegado');
+     if (Capacitor.getPlatform() !== 'web') {
+        const permiso = await Geolocation.checkPermissions();
+        
+        if (permiso.location !== 'granted') {
+          const solicitud = await Geolocation.requestPermissions();
+          if (solicitud.location !== 'granted') {
+            throw new Error('Permiso de ubicación denegado');
+          }
         }
       }
 
