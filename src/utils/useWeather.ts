@@ -1,6 +1,7 @@
 // utils/useWeather.ts
 import { useState } from 'react';
 import { Geolocation } from '@capacitor/geolocation';
+import { Capacitor } from '@capacitor/core';
 import api from '../api/config';
 
 export const useWeather = () => {
@@ -11,21 +12,24 @@ export const useWeather = () => {
   const fetchWeather = async () => {
     setLoading(true);
     setError(null);
-    try {
-      // 1. Validar y solicitar permisos (Crucial para la primera vez en Android)
-      const permiso = await Geolocation.checkPermissions();
-      
-      if (permiso.location !== 'granted') {
-        const solicitud = await Geolocation.requestPermissions();
-        if (solicitud.location !== 'granted') {
-          throw new Error('Permiso de ubicación denegado');
+  try {
+      if (Capacitor.getPlatform() !== 'web') {
+        const permiso = await Geolocation.checkPermissions();
+        
+        if (permiso.location !== 'granted') {
+          const solicitud = await Geolocation.requestPermissions();
+          if (solicitud.location !== 'granted') {
+            throw new Error('Permiso de ubicación denegado');
+          }
         }
       }
       
+      // Esto funciona perfecto tanto en Android como en Web
       const coordenadas = await Geolocation.getCurrentPosition({
         enableHighAccuracy: true,
-        timeout: 10000 // 10 segundos
+        timeout: 10000 
       });
+
       const { latitude, longitude } = coordenadas.coords;
 
       const response = await api.get(`/weather/current`, {
